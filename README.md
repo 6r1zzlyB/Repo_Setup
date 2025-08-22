@@ -7,9 +7,9 @@
 
 A personal repository setup template and style guide for creating well-organized, professional GitHub repositories. This template incorporates current GitHub best practices, modern development workflows, and consistent documentation standards for personal projects.
 
-**Author:** Matt S
-**Created:** 2025
-**License:** All Rights Reserved (see [LICENSE](./LICENSE))
+**Author:** Matt Stdenis  
+**Created:** 2025  
+**License:** All Rights Reserved (see [LICENSE](./LICENSE))  
 
 ## 🎯 Overview
 
