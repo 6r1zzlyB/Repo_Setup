@@ -1,14 +1,31 @@
 # [Project Name]
 
-[![Technology](https://img.shields.io/badge/Technology-Version-blue.svg)](link-to-technology-docs)
 [![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red.svg)](./LICENSE)
-[![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)](https://github.com/6r1zzlyB/[repository-name])
+[![Author](https://img.shields.io/badge/Author-Matthew%20Stdenis-blue.svg)](mailto:matthew.h.stdenis@gmail.com)
+[![Status](https://img.shields.io/badge/Status-Private%20Repository-orange.svg)](https://github.com/6r1zzlyB/[repository-name])
+[![Technology](https://img.shields.io/badge/[Technology]-[Version]-blue.svg)]([link-to-technology-docs])
 
-[One-line description of the project purpose and primary functionality]
+[One-line description of the project purpose and primary functionality for personal use]
 
-**Author:** Matt S  
-**Created:** [Year]  
+**Author:** Matthew Stdenis
+**Created:** [Year]
 **License:** All Rights Reserved (see [LICENSE](./LICENSE))
+
+**IMPORTANT:** This repository is confidential and intended for personal use only. It is strictly forbidden to share any part of this repository with any third party without written consent from Matthew Stdenis.
+
+<!-- Optional: Add additional legal notice for particularly sensitive repositories -->
+<!--
+## 🚨 Additional Legal Notice
+
+**This software contains proprietary methods and implementations.**
+
+- **Personal Use Only**: This repository is intended solely for personal development and learning
+- **No Distribution**: Copying, distributing, or creating derivative works is strictly prohibited
+- **Confidential Information**: May contain sensitive personal data, API keys, or proprietary algorithms
+- **Access Control**: Authorized personnel only - unauthorized access is prohibited
+
+For any questions regarding usage or access, contact the repository owner directly.
+-->
 
 ## 📋 Overview
 

@@ -1,15 +1,18 @@
 # Repository Setup Template & Style Guide
 
-[![Documentation](https://img.shields.io/badge/Documentation-Comprehensive-blue.svg)](https://github.com/6r1zzlyB/repo_setup)
 [![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red.svg)](./LICENSE)
+[![Author](https://img.shields.io/badge/Author-Matthew%20Stdenis-blue.svg)](mailto:matthew.h.stdenis@gmail.com)
 [![Status](https://img.shields.io/badge/Status-Active%20Template-brightgreen.svg)](https://github.com/6r1zzlyB/repo_setup)
+[![Documentation](https://img.shields.io/badge/Documentation-Comprehensive-blue.svg)](https://github.com/6r1zzlyB/repo_setup)
 [![GitHub Best Practices](https://img.shields.io/badge/GitHub-Best%20Practices-success.svg)](https://docs.github.com/en/contributing)
 
 A personal repository setup template and style guide for creating well-organized, professional GitHub repositories. This template incorporates current GitHub best practices, modern development workflows, and consistent documentation standards for personal projects.
 
-**Author:** Matt Stdenis  
-**Created:** 2025  
-**License:** All Rights Reserved (see [LICENSE](./LICENSE))  
+**Author:** Matthew Stdenis
+**Created:** 2025
+**License:** All Rights Reserved (see [LICENSE](./LICENSE))
+
+**IMPORTANT:** This repository is confidential and intended for personal use only. It is strictly forbidden to share any part of this repository with any third party without written consent from Matthew Stdenis.
 
 ## 🎯 Overview
 
@@ -157,6 +160,7 @@ Following GitHub's documentation best practices, we use these content types:
 | Guide | Description | Use Case |
 |-------|-------------|----------|
 | [📋 Documentation Standards](guides/documentation-standards.md) | README, changelog, and visual documentation standards | Creating consistent, professional documentation |
+| [📝 README Header Standards](guides/readme-header-standards.md) | Standardized header format for all repositories | Ensuring consistent README headers across projects |
 | [🛠️ Development Setup](guides/development-setup.md) | VS Code, Augment Code, and MCP server configuration | Setting up modern development environment |
 | [🏗️ Repository Organization](guides/repository-organization.md) | GitHub best practices and project structure | Organizing repositories professionally |
 
@@ -326,6 +330,7 @@ This template incorporates best practices and inspiration from:
 ### Quick Links
 
 - [📋 Documentation Standards](guides/documentation-standards.md)
+- [📝 README Header Standards](guides/readme-header-standards.md)
 - [🛠️ Development Setup](guides/development-setup.md)
 - [🏗️ Repository Organization](guides/repository-organization.md)
 - [📄 README Template](templates/README_TEMPLATE.md)
