@@ -1,0 +1,69 @@
+# Serena Global Configuration
+# This file contains global settings for Serena
+# Documentation: https://oraios.github.io/serena/
+
+# General settings
+general:
+  # Enable verbose logging for debugging
+  verbose: false
+
+  # Default timeout for operations (in seconds)
+  timeout: 30
+
+  # Enable automatic context detection
+  auto_detect_context: true
+
+# MCP integration settings
+mcp:
+  # Enable MCP server integration
+  enabled: true
+
+  # Default transport protocol
+  transport: stdio
+
+  # Server startup timeout (in seconds)
+  startup_timeout: 10
+
+# Editor integration
+editor:
+  # Preferred editor for interactive mode
+  default: vscode
+
+  # Auto-open files in editor
+  auto_open: true
+
+# Output settings
+output:
+  # Output format: text, json, markdown
+  format: markdown
+
+  # Enable colored output
+  colors: true
+
+  # Show timestamps in output
+  timestamps: false
+
+# Cache settings
+cache:
+  # Enable caching for faster subsequent runs
+  enabled: true
+
+  # Cache expiration time (in hours)
+  expiration: 24
+
+  # Cache directory (relative to project root)
+  directory: .serena/cache
+
+# Logging settings
+logging:
+  # Log level: debug, info, warn, error
+  level: info
+
+  # Log file location (relative to project root)
+  file: .serena/logs/serena.log
+
+  # Maximum log file size (in MB)
+  max_size: 10
+
+  # Number of log files to retain
+  retention: 5

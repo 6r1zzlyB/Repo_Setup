@@ -1,100 +1,154 @@
-# CLAUDE.md
+# Project Configuration for Claude
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file contains project-specific context, conventions, and guidelines that Claude should follow when working with this codebase.
 
-## Repository Overview
+## Project Overview
 
-This is a **repository setup template and style guide** for creating well-organized, professional GitHub repositories. It serves as both a template source and documentation standard reference for personal projects.
+This is the **Repository Setup Template & Style Guide** - a personal template for creating well-organized, professional GitHub repositories. It provides templates, documentation standards, and development environment configuration.
 
-**Key Purpose**: Provides ready-to-use templates, development standards, and comprehensive documentation guidelines for consistent repository organization across all personal projects.
+**Author:** Matthew Stdenis
+**License:** All Rights Reserved (Confidential)
 
-## Architecture & Structure
+## Code Style Guidelines
 
-### High-Level Organization
+### General Standards
+
+- Use 4-space indentation for all files (consistent with VS Code settings)
+- Maximum line length: 120 characters
+- Use UTF-8 encoding for all files
+- Files should end with a newline
+- Trim trailing whitespace
+
+### Markdown Standards
+
+- Use ATX-style headers (`#`, `##`, `###`)
+- Use fenced code blocks with language identifiers
+- Use bullet lists (`-`) for unordered lists
+- Use numbered lists (`1.`, `2.`, etc.) for sequential steps
+- Include alt text for images
+- Use reference-style links for repeated URLs
+
+### YAML Standards
+
+- Use 2-space indentation
+- Quote strings containing special characters
+- Use lowercase keys with hyphens for multi-word keys
+
+### JSON Standards
+
+- Use 2-space indentation
+- Always use double quotes for keys and string values
+- No trailing commas
+
+### PowerShell Standards
+
+- Use PascalCase for function names (Verb-Noun format)
+- Use camelCase for variables
+- Use OTBS (One True Brace Style) formatting
+- Include comment-based help for functions
+
+### Python Standards
+
+- Follow PEP 8 style guide
+- Use Black formatter with default settings
+- Use type hints for function signatures
+- Maximum line length: 88 characters (Black default)
+
+## Documentation Standards
+
+### Content Types
+
+When creating documentation, use appropriate content types:
+
+- **Conceptual** - Explains what and why
+- **Referential** - Comprehensive details and specifications
+- **Procedural** - Step-by-step instructions
+- **Troubleshooting** - Solutions for common problems
+- **Quickstart** - Fast path to get started
+- **Tutorial** - Learning-oriented guidance
+
+### Writing Principles
+
+- Start with user needs and goals
+- Use clear headings and bullet points
+- Prefer plain language over jargon
+- Use active voice
+- Keep sentences concise
+
+### Visual Documentation
+
+Use Mermaid diagrams with consistent color scheme:
+- Input/Start: `#c8e6c9` (light green)
+- Process/Action: `#e1f5fe` (light blue)
+- Decision/Logic: `#f3e5f5` (light purple)
+- Output/Storage: `#fff3e0` (light orange)
+- Error/Warning: `#ffcdd2` (light red)
+
+## Repository Structure
 
 ```
 repo_setup/
-├── templates/           # Ready-to-use templates for new projects
-│   ├── README_TEMPLATE.md      # Comprehensive README template
-│   ├── CHANGELOG_TEMPLATE.md   # Semantic versioning changelog
-│   └── PROJECT_STRUCTURE.md    # Standard directory layouts
-├── guides/             # Comprehensive documentation standards
-│   ├── development-setup.md         # VS Code, Augment, MCP setup
-│   ├── documentation-standards.md   # README/changelog standards
-│   ├── readme-header-standards.md   # Standardized headers
-│   └── repository-organization.md   # GitHub best practices
-└── examples/           # Example implementations and workflows
+├── README.md                   # Project overview
+├── LICENSE                     # License terms
+├── CHANGELOG.md                # Version history
+├── CLAUDE.md                   # Claude configuration (this file)
+├── .serena/                    # Serena configuration
+├── mise.toml                   # Mise tool configuration
+├── .github/                    # GitHub-specific files
+├── templates/                  # Ready-to-use templates
+├── guides/                     # Documentation guides
+└── examples/                   # Example implementations
 ```
 
-### Content Architecture
+## Common Commands
 
-This repository follows a **three-tier content model**:
+```bash
+# Git Operations
+git status                      # Check repository status
+git add .                       # Stage all changes
+git commit -m "type: message"   # Commit with conventional message
 
-1. **Templates** (`/templates/`) - Direct-use files that can be copied to new projects
-2. **Guides** (`/guides/`) - Comprehensive standards and setup documentation  
-3. **Examples** (`/examples/`) - Reference implementations and workflow examples
+# Development
+code .                          # Open in VS Code
+```
 
-### Documentation Standards Framework
+## Commit Message Convention
 
-The guides establish a comprehensive documentation system with:
+Use conventional commit format:
 
-- **Standardized README structure** with required sections and formatting
-- **Semantic versioning changelog format** following Keep a Changelog standards
-- **Visual documentation standards** using Mermaid diagrams with consistent color schemes
-- **Professional header format** with badges, licensing, and confidentiality notices
+```
+type(scope): description
 
-### Development Environment Integration
+[optional body]
 
-The development setup guide configures a modern development stack:
-- **VS Code** as primary editor with comprehensive extension recommendations
-- **Augment Code** for AI-powered development assistance
-- **MCP servers** for context-aware development tools (GitHub, Notion, Confluence, Sequential Thinking, Playwright, Context7, Serena, etc.)
-- **Cross-platform compatibility** for Windows, macOS, and Linux
+[optional footer]
+```
 
-## Working with This Repository
+Types:
+- `feat` - New feature
+- `fix` - Bug fix
+- `docs` - Documentation changes
+- `style` - Code style changes (formatting, etc.)
+- `refactor` - Code refactoring
+- `test` - Adding or updating tests
+- `chore` - Maintenance tasks
 
-### Common Development Tasks
+## Security Guidelines
 
-**No build/test/lint commands** - This is a documentation and template repository without executable code.
+- Never commit `.env` files or credentials
+- Keep sensitive projects private by default
+- Use environment variables for secrets
+- Review code before committing
+- Enable GitHub security alerts
 
-### Key Usage Patterns
+## AI Assistant Guidelines
 
-1. **Creating New Projects**: Copy templates from `/templates/` directory
-2. **Updating Standards**: Modify guides in `/guides/` directory  
-3. **Repository Auditing**: Use standards from guides to review existing projects
-4. **Development Setup**: Follow `/guides/development-setup.md` for environment configuration
+When working on this codebase:
 
-### File Modification Guidelines
-
-**When updating templates**:
-- Maintain placeholder format `[placeholder-text]` for customizable content
-- Keep consistent badge structure in README headers
-- Preserve license and confidentiality notices
-- Update examples to reflect current best practices
-
-**When updating guides**:
-- Maintain comprehensive section structure 
-- Update version numbers and tool recommendations
-- Keep Mermaid diagram color schemes consistent (`#c8e6c9` for inputs, `#e1f5fe` for processes, etc.)
-- Validate all cross-references and links
-
-### Key Configuration Details
-
-**MCP Server Integration**: The development setup includes configuration for 10+ MCP servers with specific capabilities:
-- GitHub (repository management)
-- Notion/Confluence (knowledge management) 
-- Sequential Thinking (logical reasoning)
-- Playwright (web automation)
-- Context7 (project context)
-- Serena (development workflow)
-
-**VS Code Configuration**: Comprehensive settings for multi-language support (PowerShell, Python, Bash, JavaScript, Markdown, YAML, XML) with formatting, linting, and debugging configurations.
-
-**Documentation Color Standards**: Visual documentation uses standardized Mermaid color scheme for consistency across all diagrams and architectural representations.
-
-## Important Notes
-
-- **Confidential Repository**: All content marked as "All Rights Reserved" and intended for personal use only
-- **Template-Based Workflow**: This repository serves as the source of truth for personal project standards
-- **Cross-Platform Standards**: All configurations and standards designed to work across Windows, macOS, and Linux
-- **AI Development Integration**: Heavily integrated with Augment Code and MCP servers for AI-assisted development workflows
+1. Follow existing patterns in templates and guides
+2. Maintain consistent formatting across all documentation
+3. Use the established Mermaid color scheme for diagrams
+4. Respect the confidential nature of this repository
+5. Check for existing templates before creating new files
+6. Follow the documentation standards outlined in `guides/documentation-standards.md`
+7. Keep README headers consistent with `guides/readme-header-standards.md`

@@ -1,0 +1,83 @@
+# Serena Project Configuration
+# This file configures Serena for the Repo_Setup project
+# Documentation: https://oraios.github.io/serena/
+
+# Project identification
+project_name: repo_setup
+project_description: Repository Setup Template & Style Guide for creating well-organized GitHub repositories
+
+# Project type and language settings
+project_type: documentation
+primary_languages:
+  - markdown
+  - yaml
+  - json
+  - powershell
+  - python
+
+# Context settings for different use cases
+# Available contexts: desktop-app, claude-code, ide, agent
+default_context: claude-code
+
+# Mode settings for different workflows
+# Available modes: planning, editing, interactive
+default_modes:
+  - editing
+  - interactive
+
+# File patterns to include in analysis
+include_patterns:
+  - "**/*.md"
+  - "**/*.yml"
+  - "**/*.yaml"
+  - "**/*.json"
+  - "**/*.ps1"
+  - "**/*.py"
+  - "**/*.sh"
+  - "**/*.toml"
+
+# File patterns to exclude from analysis
+exclude_patterns:
+  - "**/node_modules/**"
+  - "**/.git/**"
+  - "**/dist/**"
+  - "**/build/**"
+  - "**/__pycache__/**"
+  - "**/*.pyc"
+  - "**/.venv/**"
+  - "**/venv/**"
+
+# Documentation settings
+documentation:
+  readme_path: README.md
+  changelog_path: CHANGELOG.md
+  guides_directory: guides/
+  templates_directory: templates/
+
+# Code style preferences (aligned with CLAUDE.md)
+code_style:
+  indent_size: 4
+  max_line_length: 120
+  trailing_newline: true
+  trim_trailing_whitespace: true
+
+# Commit message format
+commit_format: conventional
+commit_types:
+  - feat
+  - fix
+  - docs
+  - style
+  - refactor
+  - test
+  - chore
+
+# Security settings
+security:
+  scan_for_secrets: true
+  blocked_files:
+    - "**/.env"
+    - "**/.env.local"
+    - "**/credentials.json"
+    - "**/*.pem"
+    - "**/*.key"

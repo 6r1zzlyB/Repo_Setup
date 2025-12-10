@@ -1,0 +1,136 @@
+# mise Configuration
+# Development environment and tool version management
+# Documentation: https://mise.jdx.dev/
+
+# Minimum mise version required
+min_version = "2024.11.0"
+
+# =============================================================================
+# Tools Configuration
+# =============================================================================
+# Define runtime versions for consistent development environments
+[tools]
+# Node.js - for JavaScript/TypeScript tooling
+node = "lts"
+
+# Python - for scripting and automation
+python = "3.12"
+
+# =============================================================================
+# Environment Variables
+# =============================================================================
+# Project-specific environment variables
+[env]
+# Project identification
+PROJECT_NAME = "repo_setup"
+PROJECT_TYPE = "documentation"
+
+# Development settings
+NODE_ENV = "development"
+PYTHONDONTWRITEBYTECODE = "1"
+
+# Editor preferences
+EDITOR = "code"
+
+# =============================================================================
+# Tasks Configuration
+# =============================================================================
+# Common development tasks
+
+[tasks.lint]
+description = "Run linters on all files"
+run = """
+echo "Running linters..."
+if command -v markdownlint &> /dev/null; then
+  markdownlint '**/*.md' --ignore node_modules
+fi
+echo "Lint complete!"
+"""
+
+[tasks.format]
+description = "Format all files"
+run = """
+echo "Formatting files..."
+if command -v prettier &> /dev/null; then
+  prettier --write '**/*.{json,yml,yaml,md}'
+fi
+echo "Format complete!"
+"""
+
+[tasks.validate]
+description = "Validate configuration files"
+run = """
+echo "Validating configuration files..."
+# Validate JSON files
+for file in $(find . -name '*.json' -not -path './node_modules/*'); do
+  python -m json.tool "$file" > /dev/null && echo "✓ $file" || echo "✗ $file"
+done
+echo "Validation complete!"
+"""
+
+[tasks.clean]
+description = "Clean generated and cache files"
+run = """
+echo "Cleaning generated files..."
+rm -rf node_modules/
+rm -rf __pycache__/
+rm -rf .pytest_cache/
+rm -rf .serena/cache/
+rm -rf .serena/logs/
+echo "Clean complete!"
+"""
+
+[tasks.setup]
+description = "Initial project setup"
+run = """
+echo "Setting up project..."
+# Create necessary directories
+mkdir -p .serena/cache
+mkdir -p .serena/logs
+# Install Node.js dependencies if package.json exists
+if [ -f "package.json" ]; then
+  npm install
+fi
+# Install Python dependencies if requirements.txt exists
+if [ -f "requirements.txt" ]; then
+  pip install -r requirements.txt
+fi
+echo "Setup complete!"
+"""
+
+[tasks.check]
+description = "Run all checks (lint, validate)"
+depends = ["lint", "validate"]
+
+[tasks.dev]
+description = "Open project in VS Code"
+run = "code ."
+
+# =============================================================================
+# Aliases
+# =============================================================================
+# Convenient shortcuts for common operations
+[alias]
+# Tool version aliases
+default-node = "lts"
+default-python = "3.12"
+
+# =============================================================================
+# Settings
+# =============================================================================
+# mise behavior settings
+[settings]
+# Automatically install missing tools
+not_found_auto_install = true
+
+# Number of parallel jobs for installations
+jobs = 4
+
+# Trust this configuration file
+trusted_config_paths = ["."]
+
+# Enable experimental features if needed
+experimental = false
+
+# Verbose output for debugging
+verbose = false
